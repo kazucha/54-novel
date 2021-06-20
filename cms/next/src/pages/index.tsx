@@ -219,7 +219,6 @@ export default function IndexPage() {
     });
   }
 
-{/*
   function getBookBox(book, i) {
     return (
       <div
@@ -252,12 +251,11 @@ export default function IndexPage() {
       return getBookBox(book, i);
     });
   }
-*/}
 
   function handleClickGa(elm: HTMLElement) {
     window.gtag('event', String(elm.dataset.ga));
   }
-{/*
+
   return (
     <div
       className={ styles.index }
@@ -282,7 +280,7 @@ export default function IndexPage() {
         download="54"
       >画像を保存</a>
       { getNews() }
-      <div className={ styles.box }>
+      {/*<div className={ styles.box }>
         <h1>54字の物語 好評発売中!!</h1>
         <p>たった54字の新感覚ショートストーリー。<br />意味がわかるとゾクゾクする90の物語を収録!</p>
         { getBookBoxes() }
@@ -294,8 +292,7 @@ export default function IndexPage() {
         target="_blank"
       >
         <img src="./logo.png" />
-      </a>
+  </a> */}
     </div>
   );
-  */}
 }
