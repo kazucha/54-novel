@@ -219,6 +219,7 @@ export default function IndexPage() {
     });
   }
 
+{/*
   function getBookBox(book, i) {
     return (
       <div
@@ -251,11 +252,12 @@ export default function IndexPage() {
       return getBookBox(book, i);
     });
   }
+*/}
 
   function handleClickGa(elm: HTMLElement) {
     window.gtag('event', String(elm.dataset.ga));
   }
-
+{/*
   return (
     <div
       className={ styles.index }
@@ -295,4 +297,5 @@ export default function IndexPage() {
       </a>
     </div>
   );
+  */}
 }
