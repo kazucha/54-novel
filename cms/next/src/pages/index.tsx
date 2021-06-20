@@ -272,7 +272,7 @@ export default function IndexPage() {
         className={ styles.txt } 
         contentEditable={ true }
         suppressContentEditableWarning={ true }
-      >{ novel }</div>
+      >{/*{ novel }*/}</div>
       <a
         id="btn-download"
         className={ `${styles.btn} ${styles['btn-save']}` }
