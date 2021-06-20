@@ -279,9 +279,9 @@ export default function IndexPage() {
         href={ href }
         download="54"
       >画像を保存</a>
-      {<div className={ styles.box }>{
+      {<div className={ styles.box }>
        <h1>あなたがこの１年でやってみたことを書いてみましょう。</h1>
-      }
+      </div>}
       {/*{ getNews() }
       <div className={ styles.box }>
         <h1>54字の物語 好評発売中!!</h1>
@@ -295,7 +295,7 @@ export default function IndexPage() {
         target="_blank"
       >
         <img src="./logo.png" />
-  </a> */}
+      </a> */}
     </div>
   );
 }
