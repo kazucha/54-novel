@@ -103,7 +103,7 @@ export default function IndexPage() {
         subCtx.fillStyle = '#333';
         subCtx.textBaseline = 'middle';
         subCtx.textAlign = 'center';
-        subCtx.font = TXT_SIZE + 'px serif';
+        subCtx.font = TXT_SIZE + 'px YuGothic';
 
         for (let i = 0; i < TXT_LENGTH; ++i) {
           const str = text[i];
