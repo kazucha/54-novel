@@ -61,7 +61,7 @@ export default function IndexPage() {
       setIsInit(true);
       setImg(imgElm);
     };
-    imgElm.src = './frame.png';
+    imgElm.src = './yat5_format.png';
 
     ([].slice.call(document.querySelectorAll('[data-ga]'))).forEach(function(elm: HTMLElement) {
       elm.addEventListener('click', () => {
