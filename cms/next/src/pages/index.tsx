@@ -18,17 +18,17 @@ export default function IndexPage() {
   const [ books, setBooks ] = useState([]);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const txtRef = useRef<HTMLDivElement>(null);
-  const WIDTH = 550;
-  const HEIGHT = 550;
-  const TXT_LENGTH = 54;
-  const TXT_SIZE = 40;
-  const X_MARGIN = 425;
-  const Y_MARGIN = 51;
+  const WIDTH = 550; //frameの高さ
+  const HEIGHT = 550; //frameの幅 
+  const TXT_LENGTH = 54; //文字数
+  const TXT_SIZE = 34; //テキストの大きさ
+  const X_MARGIN = 425; //入力欄の最大幅
+  const Y_MARGIN = 51; //縦の余白
   const X_RANGE = 74.5;
   const Y_RANGE = 50;
-  const X_LENGTH = 6;
-  const Y_LENGTH = 9;
-  const GRID_SIZE = 50;
+  const X_LENGTH = 6; //行数
+  const Y_LENGTH = 9; //1行の文字数
+  const GRID_SIZE = 50; //1文字のサイズ
 
   useEffect(() => {
     if (isInit) {
@@ -103,7 +103,7 @@ export default function IndexPage() {
         subCtx.fillStyle = '#333';
         subCtx.textBaseline = 'middle';
         subCtx.textAlign = 'center';
-        subCtx.font = TXT_SIZE + 'px YuGothic';
+        subCtx.font = "bold" + TXT_SIZE + 'px YuGothic';
 
         for (let i = 0; i < TXT_LENGTH; ++i) {
           const str = text[i];
