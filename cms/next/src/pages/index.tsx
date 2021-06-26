@@ -110,7 +110,7 @@ export default function IndexPage() {
       ctx.beginPath () ;
 
       // フォントを設定
-      ctx.font = "bold " + ctx + "px Arial, meiryo, sans-serif" ;
+      ctx.font = "bold " + fontSize + "px Arial, meiryo, sans-serif" ;
 
       // 1行ずつ描画
       for( var lines=text.split( "\n" ), i=0, l=lines.length; l>i; i++ ) {
