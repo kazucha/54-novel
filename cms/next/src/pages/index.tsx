@@ -22,15 +22,17 @@ export default function IndexPage() {
   const HEIGHT = 550; //frameの幅 
   const TXT_LENGTH = 54; //文字数
   const TXT_SIZE = 34; //テキストの大きさ
-  const X_MARGIN = 425; //入力欄の最大幅
-  const Y_MARGIN = 51; //縦の余白
+  //const X_MARGIN = 425; //original:入力欄の最大幅
+  //const Y_MARGIN = 51; //original:縦の余白
+  const UPPER_MARGIN = 87.5;
+  const LEFT_MARGIN = 40;
   const X_RANGE = 74.5;
   const Y_RANGE = 50;
   const X_LENGTH = 6; //行数
   const Y_LENGTH = 9; //1行の文字数
-  const GRID_SIZE = 50; //1文字のサイズ
-  const LINE_HEIGHT = 75; //1文字のサイズ
-  const LINE_WIDTH = 455; //1文字のサイズ
+  //const GRID_SIZE = 50; //1文字のサイズ
+  const LINE_HEIGHT = 75; //入力エリア１行分の高さ
+  const LINE_WIDTH = 470; //入力エリア１行分の幅
   
 
   useEffect(() => {
@@ -115,24 +117,27 @@ export default function IndexPage() {
 
           if (str) {
             subCtx.save();
-              subCtx.clearRect(0, 0, GRID_SIZE, GRID_SIZE);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
-              subCtx.translate(GRID_SIZE / 2, GRID_SIZE / 2);//context . translate(x, y) …… 移動する
+              //subCtx.clearRect(0, 0, GRID_SIZE, GRID_SIZE);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
+              subCtx.clearRect(0, 0, LINE_WIDTH, LINE_HEIGHT);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
+              //subCtx.translate(GRID_SIZE / 2, GRID_SIZE / 2);//context . translate(x, y) …… 移動する
+              subCtx.translate(LINE_WIDTH / 2, LINE_HEIGHT / 2);//context . translate(x, y) …… 移動する
               //setCharacterTransform(subCtx, str);
-              subCtx.fillText(str, 0, 0);
+              subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
             subCtx.restore();
-            ctx.drawImage(subCanvas, getX(i), getY(i));
+            ctx.drawImage(subCanvas, LEFT_MARGIN, getY(i));
           }
         }
       ctx.restore();
       setHref(canvas.toDataURL('image/png'));
     }
-
+/* 
     function getX(i: number):number {
-      return X_MARGIN - X_RANGE * (i / Y_LENGTH | 0);
+      return X_MARGIN - X_RANGE * (i / Y_LENGTH | 0); //original:右上から書き出し
     }
-
+ */
     function getY(i: number): number {
-      return Y_MARGIN + Y_RANGE * (i % Y_LENGTH);
+      // return Y_MARGIN + Y_RANGE * (i % Y_LENGTH); //original:右上から書き出し
+      return UPPER_MARGIN + LINE_HEIGHT * i //上から順に行を切り替え
     }
 
     function setCharacterTransform(ctx: CanvasRenderingContext2D, c: string):void {
