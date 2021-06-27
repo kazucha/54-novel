@@ -69,12 +69,13 @@ export default function IndexPage() {
     };
     imgElm.src = './yat5_format.png';
 
+    /* 
     ([].slice.call(document.querySelectorAll('[data-ga]'))).forEach(function(elm: HTMLElement) {
       elm.addEventListener('click', () => {
         handleClickGa(elm);
       });
     });
-
+ */
     const txt = txtRef.current;
 
     setInterval(() => {
@@ -124,7 +125,7 @@ export default function IndexPage() {
               //subCtx.translate(LINE_WIDTH / 2, LINE_HEIGHT / 2);//context . translate(x, y) …… 移動する
               //setCharacterTransform(subCtx, str);
               //subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
-              subCtx.fillText(str, LEFT_MARGIN, UPPER_MARGIN);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
+              subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
             subCtx.restore();
             ctx.drawImage(subCanvas, LEFT_MARGIN, getY(i));
           }
@@ -141,7 +142,7 @@ export default function IndexPage() {
       // return Y_MARGIN + Y_RANGE * (i % Y_LENGTH); //original:右上から書き出し
       return UPPER_MARGIN + LINE_HEIGHT * i //上から順に行を切り替え
     }
-
+/* 
     function setCharacterTransform(ctx: CanvasRenderingContext2D, c: string):void {
       let em  = TXT_SIZE,
           deg = Math.PI / 180;
@@ -210,9 +211,9 @@ export default function IndexPage() {
           ctx.translate(0, -0.25 * em);
           return;
       }
-    }
+    } */
   }, [text]);
-
+  /* 
   function getNewsItem(item, i) {
     return (
       <div
@@ -224,13 +225,15 @@ export default function IndexPage() {
       </div>
     );
   }
-
+ */
+/* 
   function getNews() {
     return news.map((item, i) => {
       return getNewsItem(item, i);
     });
   }
-
+ */
+  /* 
   function getBookBox(book, i) {
     return (
       <div
@@ -257,7 +260,8 @@ export default function IndexPage() {
       </div>
     );
   }
-
+ */
+  /* 
   function getBookBoxes() {
     return books.map((book, i) => {
       return getBookBox(book, i);
@@ -267,7 +271,7 @@ export default function IndexPage() {
   function handleClickGa(elm: HTMLElement) {
     window.gtag('event', String(elm.dataset.ga));
   }
-
+ */
   return (
     <div
       className={ styles.index }
