@@ -33,6 +33,7 @@ export default function IndexPage() {
   //const GRID_SIZE = 50; //1文字のサイズ
   const LINE_HEIGHT = 75; //入力エリア１行分の高さ
   const LINE_WIDTH = 470; //入力エリア１行分の幅
+  const MAX_LINE = 5;
   
 
   useEffect(() => {
@@ -118,9 +119,9 @@ export default function IndexPage() {
           if (str) {
             subCtx.save();
               //subCtx.clearRect(0, 0, GRID_SIZE, GRID_SIZE);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
-              subCtx.clearRect(0, 0, LINE_WIDTH, LINE_HEIGHT);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
+              //subCtx.clearRect(0, 0, LINE_WIDTH, LINE_HEIGHT);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
               //subCtx.translate(GRID_SIZE / 2, GRID_SIZE / 2);//context . translate(x, y) …… 移動する
-              subCtx.translate(LINE_WIDTH / 2, LINE_HEIGHT / 2);//context . translate(x, y) …… 移動する
+              //subCtx.translate(LINE_WIDTH / 2, LINE_HEIGHT / 2);//context . translate(x, y) …… 移動する
               //setCharacterTransform(subCtx, str);
               subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
             subCtx.restore();
