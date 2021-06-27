@@ -29,6 +29,9 @@ export default function IndexPage() {
   const X_LENGTH = 6; //行数
   const Y_LENGTH = 9; //1行の文字数
   const GRID_SIZE = 50; //1文字のサイズ
+  const LINE_HEIGHT = 75; //1文字のサイズ
+  const LINE_WIDTH = 455; //1文字のサイズ
+  
 
   useEffect(() => {
     if (isInit) {
@@ -87,7 +90,9 @@ export default function IndexPage() {
     const subCanvas = document.createElement('canvas');
     const subCtx = subCanvas.getContext('2d');
 
-    subCanvas.width = subCanvas.height = GRID_SIZE;
+    //subCanvas.width = subCanvas.height = GRID_SIZE;
+    subCanvas.width = LINE_WIDTH;
+    subCanvas.height = LINE_HEIGHT;
 
     render();
 
@@ -110,9 +115,9 @@ export default function IndexPage() {
 
           if (str) {
             subCtx.save();
-              subCtx.clearRect(0, 0, GRID_SIZE, GRID_SIZE);
-              subCtx.translate(GRID_SIZE / 2, GRID_SIZE / 2);
-              setCharacterTransform(subCtx, str);
+              subCtx.clearRect(0, 0, GRID_SIZE, GRID_SIZE);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
+              subCtx.translate(GRID_SIZE / 2, GRID_SIZE / 2);//context . translate(x, y) …… 移動する
+              //setCharacterTransform(subCtx, str);
               subCtx.fillText(str, 0, 0);
             subCtx.restore();
             ctx.drawImage(subCanvas, getX(i), getY(i));
