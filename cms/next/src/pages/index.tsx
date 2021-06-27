@@ -34,13 +34,13 @@ export default function IndexPage() {
   const LINE_HEIGHT = 75; //入力エリア１行分の高さ
   const LINE_WIDTH = 470; //入力エリア１行分の幅
   const MAX_LINE = 5;
-  
 
   useEffect(() => {
     if (isInit) {
       return;
     }
 
+/* 
     (async () => {
       const headers = { 'X-API-KEY': '28b5c90f-7954-4d78-9bd6-516c1497263a' };
 
@@ -60,6 +60,7 @@ export default function IndexPage() {
         setBooks(res[2].data.contents.reverse());
       });
     })();
+     */
 
     const imgElm = new Image();
 
@@ -109,9 +110,9 @@ export default function IndexPage() {
       ctx.restore();
 
       ctx.save();
-        subCtx.fillStyle = '#333';
-        subCtx.textBaseline = 'middle';
-        subCtx.textAlign = 'center';
+     //   subCtx.fillStyle = '#333';
+     //   subCtx.textBaseline = 'middle';
+     //   subCtx.textAlign = 'center';
         subCtx.font = "bold " + TXT_SIZE + 'pt YuGothic';
 
         for (let i = 0; i < MAX_LINE; ++i) {
