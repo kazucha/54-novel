@@ -119,6 +119,8 @@ export default function IndexPage() {
         for (let i = 0; i < MAX_TXT; ++i) {
           const str = text[i];
 
+          
+
           if (str) {
             subCtx.save();
               //subCtx.clearRect(0, 0, GRID_SIZE, GRID_SIZE);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
@@ -129,17 +131,18 @@ export default function IndexPage() {
               //subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
               subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
             subCtx.restore();
-            ctx.drawImage(subCanvas, LEFT_MARGIN, getY(i));
+            ctx.drawImage(subCanvas, getX, getY(i)); //文字の描画
           }
         }
       ctx.restore();
       setHref(canvas.toDataURL('image/png'));
     }
-/* 
+ 
     function getX(i: number):number {
-      return X_MARGIN - X_RANGE * (i / Y_LENGTH | 0); //original:右上から書き出し
+      //return X_MARGIN - X_RANGE * (i / Y_LENGTH | 0); //original:右上から書き出し
+      return LEFT_MARGIN + TXT_SIZE * i
     }
- */
+ 
     function getY(i: number): number {
       // return Y_MARGIN + Y_RANGE * (i % Y_LENGTH); //original:右上から書き出し
       return UPPER_MARGIN + LINE_HEIGHT * i //上から順に行を切り替え
