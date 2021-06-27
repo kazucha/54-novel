@@ -113,7 +113,7 @@ export default function IndexPage() {
         subCtx.textAlign = 'center';
         subCtx.font = "bold " + TXT_SIZE + 'pt YuGothic';
 
-        for (let i = 0; i < TXT_LENGTH; ++i) {
+        for (let i = 0; i < MAX_LINE; ++i) {
           const str = text[i];
 
           if (str) {
@@ -123,7 +123,8 @@ export default function IndexPage() {
               //subCtx.translate(GRID_SIZE / 2, GRID_SIZE / 2);//context . translate(x, y) …… 移動する
               //subCtx.translate(LINE_WIDTH / 2, LINE_HEIGHT / 2);//context . translate(x, y) …… 移動する
               //setCharacterTransform(subCtx, str);
-              subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
+              //subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
+              subCtx.fillText(str, LEFT_MARGIN, UPPER_MARGIN);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
             subCtx.restore();
             ctx.drawImage(subCanvas, LEFT_MARGIN, getY(i));
           }
