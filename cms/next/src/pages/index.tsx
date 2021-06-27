@@ -129,7 +129,7 @@ export default function IndexPage() {
           if (str) {
             subCtx.save();
               //subCtx.clearRect(0, 0, GRID_SIZE, GRID_SIZE);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
-              //subCtx.clearRect(0, 0, LINE_WIDTH, LINE_HEIGHT);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
+              subCtx.clearRect(0, 0, LINE_WIDTH, LINE_HEIGHT);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
               //subCtx.translate(GRID_SIZE / 2, GRID_SIZE / 2);//context . translate(x, y) …… 移動する
               //subCtx.translate(LINE_WIDTH / 2, LINE_HEIGHT / 2);//context . translate(x, y) …… 移動する
               //setCharacterTransform(subCtx, str);
