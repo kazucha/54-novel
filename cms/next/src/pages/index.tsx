@@ -34,6 +34,7 @@ export default function IndexPage() {
   const LINE_HEIGHT = 75; //入力エリア１行分の高さ
   const LINE_WIDTH = 470; //入力エリア１行分の幅
   const MAX_LINE = 5;
+  const MAX_TXT = 70; //最大文字数
 
   useEffect(() => {
     if (isInit) {
@@ -115,7 +116,7 @@ export default function IndexPage() {
      //   subCtx.textAlign = 'center';
         subCtx.font = "bold " + TXT_SIZE + 'pt YuGothic';
 
-        for (let i = 0; i < MAX_LINE; ++i) {
+        for (let i = 0; i < MAX_TXT; ++i) {
           const str = text[i];
 
           if (str) {
@@ -128,7 +129,7 @@ export default function IndexPage() {
               //subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
               subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
             subCtx.restore();
-            ctx.drawImage(subCanvas, LEFT_MARGIN, 0);
+            ctx.drawImage(subCanvas, LEFT_MARGIN, getY(i));
           }
         }
       ctx.restore();
