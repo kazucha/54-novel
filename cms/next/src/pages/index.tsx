@@ -99,37 +99,13 @@ export default function IndexPage() {
         ctx.drawImage(img, 0, 0);
       ctx.restore();
 
-      // test
-      var text = "SYNCER" + "\n" + "SYNCER" ;	// テキスト (2行)
-      var fontSize = 34 ;	// フォントサイズ
-      var lineHeight = 1.1618 ;	// 行の高さ (フォントサイズに対する倍率)
-      var x = 50 ;	// 水平位置
-      var y = 50 ;	// 垂直位置
-
-      // パスをリセット
-      ctx.beginPath () ;
-
-      // フォントを設定
-      ctx.font = "bold " + fontSize + "px Arial, meiryo, sans-serif" ;
-
-      // 1行ずつ描画
-      for( var lines=text.split( "\n" ), i=0, l=lines.length; l>i; i++ ) {
-	    var line = lines[i] ;
-	    var addY = fontSize ;
-
-    	// 2行目以降の水平位置は行数とlineHeightを考慮する
-	    if ( i ) addY += fontSize * lineHeight * i ;
-
-    	ctx.fillText( line, x + 0, y + addY ) ; 
-}
-
-    /*   ctx.save();
+      ctx.save();
         subCtx.fillStyle = '#333';
         subCtx.textBaseline = 'middle';
         subCtx.textAlign = 'center';
-        subCtx.font = "bold " + TXT_SIZE + 'px YuGothic';
- */
-/*         for (let i = 0; i < TXT_LENGTH; ++i) {
+        subCtx.font = "bold " + TXT_SIZE + 'pt YuGothic';
+
+        for (let i = 0; i < TXT_LENGTH; ++i) {
           const str = text[i];
 
           if (str) {
@@ -141,7 +117,7 @@ export default function IndexPage() {
             subCtx.restore();
             ctx.drawImage(subCanvas, getX(i), getY(i));
           }
-        } */
+        }
       ctx.restore();
       setHref(canvas.toDataURL('image/png'));
     }
@@ -292,6 +268,7 @@ export default function IndexPage() {
         <img src={ href } />
       </figure>
       <div
+        id="text" //★
         ref={ txtRef }
         className={ styles.txt } 
         contentEditable={ true }
