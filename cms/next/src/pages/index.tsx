@@ -146,7 +146,7 @@ export default function IndexPage() {
  
     function getX(i: number):number {
       //return X_MARGIN - X_RANGE * (i / Y_LENGTH | 0); //original:右上から書き出し
-      return LEFT_MARGIN + TXT_SIZE * i
+      return LEFT_MARGIN + TXT_SIZE * 1.33 * i
     }
  
     function getY(i: number): number {
