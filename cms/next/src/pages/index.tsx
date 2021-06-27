@@ -120,7 +120,7 @@ export default function IndexPage() {
           const str = text[i];
 
           subCtx.save();
-          if(str <= 14){
+          if(str){
             subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
             subCtx.restore();
             ctx.drawImage(subCanvas, getX(i), 0); //文字の描画
