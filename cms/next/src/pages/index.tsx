@@ -128,7 +128,7 @@ export default function IndexPage() {
               //subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
               subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
             subCtx.restore();
-            ctx.drawImage(subCanvas, LEFT_MARGIN, getY(i));
+            ctx.drawImage(subCanvas, LEFT_MARGIN, 0);
           }
         }
       ctx.restore();
