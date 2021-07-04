@@ -136,7 +136,7 @@ export default function IndexPage() {
               //subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
               subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
             subCtx.restore();
-            ctx.drawImage(subCanvas, getX(i), 0); //文字の描画
+            ctx.drawImage(subCanvas, getX(i), getY(i)); //文字の描画
           }
 
         }
