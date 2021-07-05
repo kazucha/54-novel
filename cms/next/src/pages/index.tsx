@@ -94,11 +94,11 @@ export default function IndexPage() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     const subCanvas = document.createElement('canvas');
-    const subCtx = subCanvas.getContext('2d');
+    //const subCtx = subCanvas.getContext('2d');
 
     //subCanvas.width = subCanvas.height = GRID_SIZE;
-    subCanvas.width = LINE_WIDTH;
-    subCanvas.height = LINE_HEIGHT;
+    //subCanvas.width = LINE_WIDTH;
+    //subCanvas.height = LINE_HEIGHT;
 
     render();
 
@@ -107,17 +107,21 @@ export default function IndexPage() {
       canvas.height = HEIGHT;
 
       ctx.save();
-        ctx.drawImage(img, 0, 0);
+      ctx.drawImage(img, 0, 0);
       ctx.restore();
 
       ctx.save();
-     //   subCtx.fillStyle = '#333';
-          subCtx.textBaseline = 'middle'; // context . textBaseline = "ベースラインの位置" …… ベースラインの位置を指定する
-     //   subCtx.textAlign = 'center';
-        subCtx.font = "bold " + TXT_SIZE + 'pt YuGothic';
 
-        for (let i = 0; i < MAX_TXT; ++i) {
-          const str = text[i];
+      ctx.fillText("Hello!!", 0, 0);//context.fillText(text, x, y [, maxWidth ] )
+
+
+     //   subCtx.fillStyle = '#333';
+     //     subCtx.textBaseline = 'middle'; // context . textBaseline = "ベースラインの位置" …… ベースラインの位置を指定する
+     //   subCtx.textAlign = 'center';
+      //  subCtx.font = "bold " + TXT_SIZE + 'pt YuGothic';
+
+       // for (let i = 0; i < MAX_TXT; ++i) {
+         // const str = text[i];
 
 /*           subCtx.save();
           if(str){
@@ -126,20 +130,20 @@ export default function IndexPage() {
             ctx.drawImage(subCanvas, getX(i), 0); //文字の描画
           }
  */
-          if (str) {
-            subCtx.save();
+        //  if (str) {
+           // subCtx.save();
               //subCtx.clearRect(0, 0, GRID_SIZE, GRID_SIZE);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
-              subCtx.clearRect(0, 0, LINE_WIDTH, LINE_HEIGHT);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
+            //  subCtx.clearRect(0, 0, LINE_WIDTH, LINE_HEIGHT);//context . clearRect(x, y, w, h) …… 四角形の形にクリアする
               //subCtx.translate(GRID_SIZE / 2, GRID_SIZE / 2);//context . translate(x, y) …… 移動する
               //subCtx.translate(LINE_WIDTH / 2, LINE_HEIGHT / 2);//context . translate(x, y) …… 移動する
               //setCharacterTransform(subCtx, str);
               //subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
-              subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
-            subCtx.restore();
-            ctx.drawImage(subCanvas, getX(i), getY(i)); //文字の描画
-          }
+           //   subCtx.fillText(str, 0, 0);//context.fillText(text, x, y [, maxWidth ] ) …… 塗りつぶしのテキストを指定座標に描画する
+           // subCtx.restore();
+           // ctx.drawImage(subCanvas, getX(i), getY(i)); //文字の描画
+        //  }
 
-        }
+      //  }
       ctx.restore();
       setHref(canvas.toDataURL('image/png'));
     }
