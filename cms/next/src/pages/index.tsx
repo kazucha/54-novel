@@ -15,12 +15,12 @@ export default function IndexPage() {
   const [ href, setHref ] = useState('');
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const txtRef = useRef<HTMLDivElement>(null);
-  const WIDTH = 550; //frameの高さ
-  const HEIGHT = 550; //frameの幅 
-  const TXT_SIZE = 34; //テキストの大きさ
+  const WIDTH = 550;
+  const HEIGHT = 550; 
+  const TXT_SIZE = 34;
   const UPPER_MARGIN = 95;
   const LEFT_MARGIN = 40;
-  const LINE_HEIGHT = 80; //入力エリア１行分の高さ
+  const LINE_HEIGHT = 80;
 
   useEffect(() => {
     if (isInit) {
