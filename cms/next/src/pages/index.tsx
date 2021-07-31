@@ -21,7 +21,7 @@ export default function IndexPage() {
   const UPPER_MARGIN = 95;
   const LEFT_MARGIN = 40;
   const LINE_HEIGHT = 80;
-
+  
   useEffect(() => {
     if (isInit) {
       return;
@@ -59,28 +59,27 @@ export default function IndexPage() {
     for(var lines = text.split( "\n" ), i = 0, l = lines.length; l > i; i++ ) {
       var line = lines[i] ;
       var addY = TXT_SIZE ;
-      if(i) addY += LINE_HEIGHT * i ;
-      if(i < 5) ctx.fillText(line.slice(0,14), LEFT_MARGIN, UPPER_MARGIN + addY ) ;
+      addY += LINE_HEIGHT * i ;
+      if(i < 5) ctx.fillText(line.slice(0, 14), LEFT_MARGIN, UPPER_MARGIN + addY ) ;
     }
     
     setHref(canvas.toDataURL('image/png'));
  
   }, [text, img]);
- 
-  function bytes(str) {
-    str = str.replace(/[｡-ﾟ]/g, 'K');
-    var hex = '';
-    for (var i = 0; i < str.length; i++) {
-      hex += (('0000' + str.charCodeAt(i).toString(16)).slice(-4)).replace(/^00/, '');
-    }
-    return hex.length/2;
-  }
 
   return (
     <div
       className={ styles.index }
       style={{ opacity: isInit ? 1 : 0 }}
     >
+      <div
+       className={ styles.title }>
+        #この1年でやってみた
+      </div>
+      <div
+      className={ styles.description }>
+        あなたが「この１年でやってみた」ことを書いてみましょう。
+      </div>
       <figure>
         <canvas
           ref={ canvasRef }
@@ -99,9 +98,11 @@ export default function IndexPage() {
         className={ `${styles.btn} ${styles['btn-save']}` }
         href={ href }
         download="54"
-      >画像を保存</a>
+      >画像をダウンロード</a>
       {<div className={ styles.box }>
-       <h1>あなたがこの１年でやってみたことを書いてみましょう。</h1>
+       <p>[基本ルール]</p>
+       <p>1. 文字数は1行あたり14文字以内に収める</p>
+       <p>2. 改行で次の行に移る</p>
       </div>}
     </div>
   );
