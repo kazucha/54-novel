@@ -20,7 +20,7 @@ export default class Layout extends Document {
           <meta property="og:title" content="#この１年でやってみた" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://my-this-year.vercel.app/" />
-          <meta property="og:image" content="https://my-this-year.vercel.app/opg.png" />
+          <meta property="og:image" content="https://my-this-year.vercel.app/ogp.png" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:site_name" content="#この１年でやってみた" />
@@ -28,7 +28,7 @@ export default class Layout extends Document {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="#この１年でやってみた" />
           <meta name="twitter:description" content="あなたがこの１年でやってみたことを書いてみましょう。" />
-          <meta name="twitter:image:src" content="https://my-this-year.vercel.app/opg.png" />
+          <meta name="twitter:image:src" content="https://my-this-year.vercel.app/ogp.png" />
           <meta name="format-detection" content="telephone=no" />
           <link rel="shortcut icon" href="https://my-this-year.vercel.app/favicon.ico" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
