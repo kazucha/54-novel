@@ -97,7 +97,7 @@ export default function IndexPage() {
         id="btn-download"
         className={ `${styles.btn} ${styles['btn-save']}` }
         href={ href }
-        download="54"
+        download="this-my-year"
       >画像をダウンロード</a>
       {<div className={ styles.box }>
        <p>[基本ルール]</p>
