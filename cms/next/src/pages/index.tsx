@@ -49,7 +49,7 @@ export default function IndexPage() {
 
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-   
+
     canvas.width  = WIDTH;
     canvas.height = HEIGHT;
 
@@ -64,7 +64,6 @@ export default function IndexPage() {
     }
     
     setHref(canvas.toDataURL('image/png'));
- 
   }, [text, img]);
 
   return (
