@@ -55,8 +55,9 @@ export default function IndexPage() {
 
     ctx.font = 'bold 34px "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif';
     ctx.drawImage(img, 0, 0);
-    
-    for(var lines = text.split( "\n" ), i = 0, l = lines.length; l > i; i++ ) {
+
+    var rep_text = text.replace(/\n{2}/g, '\n');
+    for(var lines = rep_text.split('\n'), i = 0, l = lines.length; l > i; i++ ) {
       var line = lines[i] ;
       var addY = TXT_SIZE ;
       addY += LINE_HEIGHT * i ;
