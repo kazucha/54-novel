@@ -53,7 +53,7 @@ export default function IndexPage() {
     canvas.width  = WIDTH;
     canvas.height = HEIGHT;
 
-    ctx.font = "Bold 34px Yu Gothic"
+    ctx.font = 'bold 34px "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif';
     ctx.drawImage(img, 0, 0);
     
     for(var lines = text.split( "\n" ), i = 0, l = lines.length; l > i; i++ ) {
