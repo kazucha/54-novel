@@ -70,52 +70,11 @@
   overflow: hidden;
 
   p {
-    margin: 0px;
     font-size: 15px;
     text-align: center;
     line-height: 25px;
     font-weight: bold;
-  }
-
-  ul {
-    margin: 5px auto 15px;
-    padding-left: 20px;
-    font-size: 10px;
-  }
-
-  p {
     margin: 5px;
-  }
-}
-
-.book-box {
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
-
-.book-link {
-  width: 50%;
-}
-
-.book-link-img {
-  width: 100%;
-}
-
-.book-link-btn {
-  margin-top: 5px;
-  height: 40px;
-  line-height: 40px;
-}
-
-.logo {
-  display: block;
-  margin: 28px auto 20px;
-  width: 100px;
-
-  img {
-    width: 100%;
   }
 }
 
