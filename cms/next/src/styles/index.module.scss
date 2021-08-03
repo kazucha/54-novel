@@ -41,7 +41,6 @@
 
 .btn {
   display: block;
-  border-bottom: solid #666666 4px;
   border-radius: 10px;
   color: #eee;
   cursor: pointer;
@@ -51,14 +50,13 @@
   text-decoration: none;
   text-align: center;
   background: linear-gradient(#5a5a5a, #4e4e4e);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, .2);
   user-select: none;
 }
 
 .btn-save {
   margin: 10px auto;
   width: 288px; height: 60px;
-  line-height: 60px;
+  line-height: 42px;
 }
 
 .box {
@@ -122,7 +120,7 @@
 }
 
   .title{
-    font-size: 40px;
+    font-size: px;
     text-align: center;
     font-weight: bold;
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
@@ -132,5 +130,7 @@
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    letter-spacing: 0.15em;
   }
