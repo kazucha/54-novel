@@ -99,7 +99,7 @@ export default function IndexPage() {
         download="this-my-year"
       >画像をダウンロード</a>
       {<div className={ styles.box }>
-       <p>[基本ルール]</p>
+       <p>［基本ルール］</p>
        <p>1. 文字数は1行あたり14文字以内に収める</p>
        <p>2. 改行で次の行に移る</p>
       </div>}
