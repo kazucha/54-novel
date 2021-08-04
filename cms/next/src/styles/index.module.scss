@@ -69,7 +69,7 @@
   background: #a2daf7;
   overflow: hidden;
 
-  p {
+  .pbox {
     font-size: 15px;
     text-align: center;
     line-height: 25px;
@@ -86,12 +86,18 @@
     margin-top: 12px;
   }
 
-  .description{
+  .pdesupper{
+    margin-top: 12px;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    margin-top: 12px;
-    margin-bottom: 24px;
     letter-spacing: 0.05em;
-    line-height: 20.25px;
+  }
+
+  .pdesbottom{
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.05em;
   }
