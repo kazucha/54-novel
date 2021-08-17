@@ -74,13 +74,18 @@ export default function IndexPage() {
     >
       <div
        className={ styles.title }>
-        #この1年でやってみた
+         <img className={ styles.title_img } src = "./mty_title.gif"></img>
       </div>
       <div
-      // className={ styles.description }
+       className={styles.img1_div}>
+       <img className={ styles.num_img } src= "./mty_1.png"></img>
+      </div>
+      <div
+       className={ styles.description }
        >
-        <p className={ styles.pdesupper }>あなたが「この１年でやってみた」ことを</p>
-        <p className={ styles.pdesbottom }>書いてみましょう。</p>
+        <p>あなたが「この１年でやってみた」ことを</p>
+        <p>5つ書いてみましょう。</p>
+        <p>(1行あたり14文字以内に収めてください)</p>
       </div>
       <figure>
         <canvas
@@ -95,17 +100,42 @@ export default function IndexPage() {
         contentEditable={ true }
         suppressContentEditableWarning={ true }
       ></div>
+      <div
+        className={ styles.arrowdiv1 }>
+          <img className={ styles.arrow_img } src="./mty_yajirushi.png"></img>
+      </div>
+      <div
+       className={styles.img2_div}>
+       <img className={ styles.num_img } src= "./mty_2.png"></img>
+      </div>
+      <div
+       className={ styles.description }
+       >
+        <p className={ styles.pdes }>入力が終わったら、</p>
+        <p className={ styles.pdes }>画像をダウンロードしてみましょう。</p>
+      </div>
       <a
         id="btn-download"
-        className={ `${styles.btn} ${styles['btn-save']}` }
+        className={ `${styles.btn} ${styles['btn-save']}` } 
         href={ href }
         download="this-my-year"
-      >画像をダウンロード</a>
+        backgroud-color= "#fff"
+      ><img className={ styles.download_img} src="./mty_dl.gif"></img></a>
+      <div
+        className={ styles.arrowdiv2 }>
+        <img  className={ styles.arrow_img } src="./mty_yajirushi.png"></img>
+      </div>
+      <div
+       className={styles.img3_div}>
+       <img className={ styles.num_img } src= "./mty_3.png"></img>
+      </div>
       {<div className={ styles.box }>
-       <p className={ styles.pbox }>［基本ルール］</p>
-       <p className={ styles.pbox }>1. 文字数は1行あたり14文字以内に収める</p>
-       <p className={ styles.pbox }>2. 改行で次の行に移る</p>
+       <p className={ styles.pbox }>SNSでシェアしてみましょう。</p>
       </div>}
+      <div className={ styles.twitter_div } >
+        <a href="https://twitter.com/1nen_yattemita" target="_blank" className={ styles.twitter_link }>
+        <img className={ styles.twitter_icon } src="./mty_twitter.png"></img>「#この1年でやってみた」公式ツイッター</a>
+      </div>
     </div>
   );
 }

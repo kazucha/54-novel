@@ -45,6 +45,7 @@ export default class Layout extends Document {
           />
         </Head>
         <body>
+        <div className="white-header"> </div>
           <Main />
           <NextScript />
         </body>
