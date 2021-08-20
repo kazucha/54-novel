@@ -118,7 +118,7 @@ export default function IndexPage() {
         id="btn-download"
         className={ `${styles.btn} ${styles['btn-save']}` } 
         href={ href }
-        download="1nen_yattemita"
+        download="1nen-yattemita"
         backgroud-color= "#fff"
       ><img className={ styles.download_img} src="./mty_dl.gif"></img></a>
       <div
