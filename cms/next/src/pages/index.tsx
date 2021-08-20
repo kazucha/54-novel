@@ -74,7 +74,7 @@ export default function IndexPage() {
     >
       <div
        className={ styles.title }>
-         <img className={ styles.title_img } src = "./mty_title.gif"></img>
+         <img className={ styles.title_img } src = "./mty_title.png"></img>
       </div>
       <div
        className={styles.img1_div}>
