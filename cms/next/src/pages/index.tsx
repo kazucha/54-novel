@@ -85,7 +85,7 @@ export default function IndexPage() {
        >
         <p>あなたが「この１年でやってみた」ことを</p>
         <p>5つ書いてみましょう。</p>
-        <p>(1行あたり14文字以内に収めてください)</p>
+        <p>（1行あたり14文字以内に収めてください）</p>
       </div>
       <figure>
         <canvas
